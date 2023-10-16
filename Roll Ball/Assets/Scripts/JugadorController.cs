@@ -10,6 +10,7 @@ public class JugadorController : MonoBehaviour
     private int contador;
     public Text textoContador, textoGanar;
     public float velocidad;
+    public AudioClip monedas;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,8 @@ public class JugadorController : MonoBehaviour
     void setTextoContador()
     {
         textoContador.text = "Contador: " + contador.ToString();
+        AudioSource.PlayClipAtPoint(monedas, transform.position);
+
         if (contador >= 12)
         {
             textoGanar.text = "¡Ganaste!";
