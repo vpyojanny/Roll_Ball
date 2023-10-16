@@ -22,7 +22,7 @@ public class Rotador : MonoBehaviour
         aux++;
         tiempo=aux/100;
         textoTiempo.text = "Tiempo (segundos): " + (tiempo).ToString();
-
+        textoPerder.text = "";
         if (tiempo >= 60)
         {
             textoPerder.text = "¡Game Over!";

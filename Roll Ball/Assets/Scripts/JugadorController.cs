@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class JugadorController : MonoBehaviour
 {
@@ -50,6 +52,8 @@ public class JugadorController : MonoBehaviour
         if (contador >= 12)
         {
             textoGanar.text = "¡Ganaste!";
+            Thread.Sleep(5000);
+            SceneManager.LoadScene("Escena2");
         }
     }
 }
